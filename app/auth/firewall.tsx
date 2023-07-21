@@ -1,6 +1,6 @@
-//'use client';
+'use client';
 
-//import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import { redirect } from 'next/navigation';
 
@@ -9,9 +9,6 @@ function delay() {
 }
 
 const Firewall = ({ children }) => {
-  return <p>firewall</p>;
-  return {children};
-
   const [isDone, setDone] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false);
 
@@ -24,14 +21,14 @@ const Firewall = ({ children }) => {
   }, []);
 
   if (!isDone) {
-    return <p>please wait...</p>;
+    return <p>try login...</p>;
   }
 
   if (!isLoggedIn) {
     return redirect('/');
   }
 
-  return {children};
+  return <>{children}</>;
 }
 
 export default Firewall;
