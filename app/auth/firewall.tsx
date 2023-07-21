@@ -13,10 +13,13 @@ const Firewall = ({ children }) => {
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
+    console.log('login start');
+
     setDone(false);
     delay().then(() => {
       setDone(true);
       setLoggedIn(true);
+      console.log('login done');
     });
   }, []);
 
