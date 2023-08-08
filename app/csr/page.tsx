@@ -1,6 +1,6 @@
 'use client';
 
-function monitor(arg = null, msg = null) {
+function monitor(arg: any, msg: string) {
   if (msg) {
     console.log(msg);
   }
@@ -8,7 +8,7 @@ function monitor(arg = null, msg = null) {
   return arg;
 }
 
-export default async function () {
+export default async function csr() {
   if (process.browser) {
     monitor(null, 'CSR func called');
   } else {
