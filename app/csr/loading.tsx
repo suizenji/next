@@ -1,3 +1,3 @@
 export default function Loading() {
-  return <div>SSR loading...</div>;
+  return <div>CSR loading...</div>;
 }
