@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useContext } from "react";
+import React, { FC, ReactNode, useState, useContext } from "react";
 
 import { redirect } from 'next/navigation';
 
@@ -8,7 +8,12 @@ function delay() {
   return new Promise(resolve => setTimeout(resolve, 1000));
 }
 
-const Firewall = ({ children }) => {
+// https://maku.blog/p/xenv4bh/
+type Props = {
+  children: ReactNode
+}
+
+const Firewall:FC<Props> = ({ children }) => {
   const [isDone, setDone] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false);
 
